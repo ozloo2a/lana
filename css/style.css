@@ -114,6 +114,7 @@ nav #list-items.mobile ul li a {
 }
 nav #list-items.mobile ul li a.active {
   color: #000;
+  border-bottom: 1px solid #000;
 }
 nav .close-icon {
   display: none;
@@ -130,7 +131,7 @@ nav .ul-icon {
   font-size: 20px;
 }
 nav .ul-icon .fa-xmark {
-  color: #000;
+  color: #fff;
 }
 nav.white {
   background-color: #fff;
@@ -144,6 +145,9 @@ nav.white a {
 nav.white a.active {
   color: #000 !important;
   border-bottom: 1px solid #000 !important;
+}
+nav.white .ul-icon {
+  color: #000;
 }
 
 span.left {

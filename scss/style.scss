@@ -85,6 +85,7 @@ nav {
                         color: #777;
                         &.active {
                             color: #000;
+                            border-bottom: 1px solid #000;
                         }
                     }
                 }
@@ -105,7 +106,7 @@ nav {
         top: 20px;
         font-size: 20px;
         .fa-xmark {
-            color: #000;
+            color: #fff;
         }
     }
     &.white {
@@ -119,6 +120,9 @@ nav {
                 color: #000 !important;
                 border-bottom: 1px solid #000 !important;
             }
+        }
+        .ul-icon {
+            color: #000
         }
     }
 }

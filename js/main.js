@@ -1,14 +1,34 @@
+// show nav on mobile
+
+const list = document.getElementById("list-items");
+const barsIcon = document.querySelector(".ul-icon")
+const closeIcon = document.querySelector(".close-icon")
+
+barsIcon.addEventListener("click", () => {
+    list.classList.add("mobile")
+    closeIcon.style.display = 'flex'
+    barsIcon.style.display = 'none'
+})
+function closeNav() {
+    list.classList.remove("mobile")
+    closeIcon.style.display = 'none'
+    barsIcon.style.display = 'block'
+}
+closeIcon.addEventListener("click", closeNav)
+
 // set active class on active li
 const nav = document.getElementsByTagName('nav')[0]; // replace 'my-element' with the ID of your element
 const listItems = Array.from(document.getElementsByClassName("item"))
 const navStyles = window.getComputedStyle(nav)
 
+
 //add active to clicked item
 listItems.forEach((item) => {
     listItems[0].classList.add('active')
     item.addEventListener("click", () => {
+        closeNav()
         listItems.forEach(item => item.classList.remove("active"))
-            item.classList.add("active")
+        item.classList.add("active")
     })
 })
 
@@ -81,20 +101,3 @@ window.onscroll = () => {
     }
 }
 
-// show nav on mobile
-
-const list = document.getElementById("list-items");
-const barsIcon = document.querySelector(".ul-icon")
-const closeIcon = document.querySelector(".close-icon")
-
-barsIcon.addEventListener("click", () => {
-    list.classList.add("mobile")
-    closeIcon.style.display = 'flex'
-    barsIcon.style.display = 'none'
-})
-
-closeIcon.addEventListener("click", (e) => {
-    list.classList.remove("mobile")
-    closeIcon.style.display = 'none'
-    barsIcon.style.display = 'block'
-})
