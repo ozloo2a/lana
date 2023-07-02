@@ -84,7 +84,7 @@ nav #list-items ul li a {
 }
 nav #list-items ul li a.active {
   border-bottom: 1px solid #fff;
-  color: #000;
+  color: #fff;
 }
 nav #list-items ul li a:hover {
   color: #ccc;
@@ -139,11 +139,11 @@ nav.white .logo {
   filter: invert(0);
 }
 nav.white a {
-  color: #666;
+  color: #666 !important;
 }
 nav.white a.active {
-  color: #000;
-  border-bottom: 1px solid #000;
+  color: #000 !important;
+  border-bottom: 1px solid #000 !important;
 }
 
 span.left {
