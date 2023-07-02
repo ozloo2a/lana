@@ -1,0 +1,556 @@
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.btn-primary, .btn-secondary {
+  padding: 13px 18px;
+  border-radius: 4px;
+  border: none;
+  font-size: 17px;
+}
+
+.btn-secondary {
+  background-color: rgba(89, 89, 89, 0.7019607843);
+  color: #fff;
+  margin-left: 10px;
+}
+
+.btn-primary {
+  background-color: white;
+  color: #000;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", Helvetica, sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+h1 {
+  font-weight: 300;
+  font-size: 54px;
+}
+
+p {
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+main {
+  position: relative;
+}
+
+nav {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgba(0, 0, 0, 0.0001);
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 4;
+}
+nav .logo {
+  padding: 30px;
+  filter: invert(1);
+}
+nav #list-items {
+  padding: 30px;
+}
+nav #list-items ul {
+  display: flex;
+  list-style: none;
+}
+nav #list-items ul li {
+  padding-left: 20px;
+}
+nav #list-items ul li a {
+  text-decoration: none;
+  color: #fff;
+  transition: 0.3s;
+  transition-property: color;
+  padding-bottom: 6px;
+  color: #fff;
+}
+nav #list-items ul li a.active {
+  border-bottom: 1px solid #fff;
+  color: #000;
+}
+nav #list-items ul li a:hover {
+  color: #ccc;
+  transition: 0.3s;
+  transition-property: color;
+}
+nav #list-items.mobile {
+  background-color: #fff;
+  display: block;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  transition: 0.3s ease-in-out;
+  height: 100vh;
+}
+nav #list-items.mobile ul {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+}
+nav #list-items.mobile ul li {
+  margin: 25px 0;
+}
+nav #list-items.mobile ul li a {
+  color: #777;
+}
+nav #list-items.mobile ul li a.active {
+  color: #000;
+}
+nav .close-icon {
+  display: none;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  color: #000;
+}
+nav .ul-icon {
+  display: none;
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  font-size: 20px;
+}
+nav .ul-icon .fa-xmark {
+  color: #000;
+}
+nav.white {
+  background-color: #fff;
+}
+nav.white .logo {
+  filter: invert(0);
+}
+nav.white a {
+  color: #666;
+}
+nav.white a.active {
+  color: #000;
+  border-bottom: 1px solid #000;
+}
+
+span.left {
+  position: fixed;
+  top: 0;
+  width: 1px;
+  height: 90vh;
+  z-index: 1;
+  background: #777;
+  left: 70px;
+}
+span.left span {
+  position: fixed;
+  top: 0;
+  width: 1px;
+  height: 90vh;
+  z-index: 1;
+  background: #777;
+}
+
+span.right {
+  position: fixed;
+  top: 0;
+  width: 1px;
+  height: 90vh;
+  z-index: 1;
+  background: #777;
+  right: 70px;
+}
+span.right span {
+  position: fixed;
+  top: 0;
+  width: 1px;
+  height: 90vh;
+  z-index: 1;
+  background: #777;
+}
+
+.home {
+  background-image: url("https://preview.erilisdesign.com/html/lana/assets/images/image-8.jpg");
+  background-position: top center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+}
+.home .home-content {
+  position: absolute;
+  top: 40%;
+  z-index: 1;
+}
+.home .home-content h1 {
+  margin-bottom: 20px;
+}
+.home .home-content p {
+  margin-bottom: 20px;
+}
+
+.our-mission {
+  background-image: url("https://preview.erilisdesign.com/html/lana/assets/images/image-1.jpg");
+  background-position: top center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+}
+.our-mission .mission-content {
+  position: relative;
+  width: 50%;
+}
+.our-mission .mission-content h1 {
+  margin-bottom: 20px;
+}
+
+.what-we-do {
+  background-image: url("https://preview.erilisdesign.com/html/lana/assets/images/image-2.jpg");
+  background-position: top center;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  align-items: center;
+}
+.what-we-do .what-we-do-handler {
+  display: flex;
+  position: relative;
+  justify-content: space-between;
+}
+.what-we-do .what-we-do-handler .what-we-do-content, .what-we-do .what-we-do-handler .what-features {
+  flex: 1;
+}
+.what-we-do .what-we-do-handler .what-features {
+  flex-wrap: wrap;
+  display: flex;
+}
+.what-we-do .what-we-do-handler .what-we-do-content p {
+  width: 75%;
+}
+.what-we-do .what-we-do-handler .feat {
+  width: 50%;
+  margin-bottom: 20px;
+}
+.what-we-do .what-we-do-handler .feat i {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+.what-we-do .what-we-do-handler .feat h4 {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.our-solutions {
+  background-image: url("https://preview.erilisdesign.com/html/lana/assets/images/image-3.jpg");
+  background-position: top center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  position: relative;
+  color: #fff;
+}
+.our-solutions .solutions-content {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  width: 1262px;
+}
+.our-solutions .solutions-content .main-header, .our-solutions .solutions-content .secondary-solutions {
+  flex: 1;
+}
+.our-solutions .solutions-content .main-header {
+  width: 50%;
+  margin-bottom: 50px;
+}
+.our-solutions .solutions-content .secondary-solutions {
+  display: flex;
+  flex-wrap: wrap;
+}
+.our-solutions .solutions-content .secondary-solutions .solution {
+  width: 50%;
+}
+.our-solutions .solutions-content h3 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: 300;
+}
+
+.our-work {
+  background-image: url("https://preview.erilisdesign.com/html/lana/assets/images/image-13.jpg");
+  background-position: top center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  position: relative;
+}
+.our-work .work-content {
+  position: absolute;
+  top: 200px;
+  width: 40%;
+  color: #fff;
+}
+.our-work .works {
+  position: absolute;
+  top: 400px;
+  color: #fff;
+}
+.our-work .works .work-item {
+  display: none;
+  animation: fade-in 0.3s ease-in-out;
+  height: 630px;
+}
+.our-work .works .work-item#active {
+  display: flex;
+}
+.our-work .works .work-item .data {
+  margin: 25px;
+}
+.our-work .works .work-item .data h4 {
+  font-size: 32px;
+}
+.our-work .works .work-item img {
+  transition: 200ms opacity ease-in-out;
+  height: 100%;
+}
+.our-work .controls {
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  top: 600px;
+  width: 70%;
+  left: 200px;
+}
+.our-work .controls i {
+  background: #fff;
+  cursor: pointer;
+  color: #000;
+  padding: 13px 17px;
+}
+
+.contact-us {
+  background-image: url("https://preview.erilisdesign.com/html/lana/assets/images/image-14.jpg");
+  background-position: top center;
+  height: 100vh;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  position: relative;
+  color: #fff;
+  position: relative;
+  color: white;
+  align-items: center;
+}
+.contact-us img {
+  filter: brightness(0.6);
+  width: 100%;
+}
+.contact-us .contact-handler {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
+.contact-us .contact-handler .t {
+  width: 40%;
+}
+.contact-us .contact-handler .contact-desc {
+  margin-bottom: 30px;
+}
+.contact-us .contact-handler .contact-info {
+  display: flex;
+  flex-wrap: wrap;
+}
+.contact-us .contact-handler .contact-info .phone, .contact-us .contact-handler .contact-info .email, .contact-us .contact-handler .contact-info .location {
+  width: 50%;
+  margin-bottom: 20px;
+}
+.contact-us .contact-handler .contact-enter input {
+  border-radius: 4px;
+  outline: none;
+  border: 2px solid #fff;
+  padding: 10px;
+  width: 265px;
+  height: 44px;
+  margin-bottom: 10px;
+}
+.contact-us .contact-handler .contact-enter input.subject, .contact-us .contact-handler .contact-enter input.message {
+  width: 100%;
+}
+.contact-us .contact-handler .contact-enter input.message {
+  padding-top: 20px;
+  padding-bottom: 200px;
+}
+.contact-us .contact-handler textarea {
+  width: 100%;
+  padding: 10px;
+  border-radius: 4px;
+  outline: none;
+  border: 2px solid #fff;
+  margin-bottom: 10px;
+}
+.contact-us .contact-handler .btn-secondary {
+  margin: 0;
+}
+
+@keyframes fade-in {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@media (max-width: 768px) {
+  .left, .right {
+    display: none;
+  }
+  nav {
+    justify-content: space-between;
+  }
+  nav #list-items {
+    position: absolute;
+    left: 500px;
+  }
+  nav .ul-icon {
+    display: block;
+    color: #fff;
+  }
+  .home .home-content h1 {
+    font-size: 35px;
+  }
+  .our-mission {
+    justify-content: start;
+    padding: 40px 0;
+  }
+  .our-mission .mission-content {
+    width: 100%;
+  }
+  .our-mission .mission-content h1 {
+    font-size: 35px;
+  }
+  .what-we-do {
+    padding: 40px 0;
+    height: 100%;
+  }
+  .what-we-do .what-we-do-handler {
+    flex-direction: column;
+  }
+  .what-we-do .what-we-do-handler .what-we-do-content {
+    margin-bottom: 25px;
+  }
+  .what-we-do .what-we-do-handler .what-we-do-content h1 {
+    font-size: 35px;
+    margin-bottom: 20px;
+  }
+  .what-we-do .what-we-do-handler .what-we-do-content p {
+    width: 100%;
+  }
+  .what-we-do .what-we-do-handler .what-features {
+    flex-direction: column;
+  }
+  .what-we-do .what-we-do-handler .what-features .feat p {
+    font-size: 20px;
+  }
+  .what-we-do .what-we-do-handler .what-features .feat i {
+    font-size: 40px;
+  }
+  .our-solutions {
+    padding: 25px 0;
+    height: 100%;
+  }
+  .our-solutions .solutions-content {
+    width: 100%;
+  }
+  .our-solutions .solutions-content .main-header {
+    width: 100%;
+  }
+  .our-solutions .solutions-content .main-header h3 {
+    font-size: 25px;
+  }
+  .our-solutions .solutions-content .main-header p {
+    font-size: 15px;
+  }
+  .our-solutions .solutions-content .secondary-solutions .solution {
+    width: 100%;
+  }
+  .our-solutions .solutions-content .secondary-solutions .solution h3 {
+    font-size: 25px;
+  }
+  .our-solutions .solutions-content .secondary-solutions .solution p {
+    font-size: 15px;
+  }
+  .our-work {
+    height: 100%;
+  }
+  .our-work .work-content {
+    width: 100%;
+    position: relative;
+    top: 0;
+    padding: 30px 0;
+  }
+  .our-work .work-content h1 {
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+  .our-work .work-content p {
+    font-size: 16px;
+  }
+  .our-work .work-item {
+    display: block !important;
+    height: auto !important;
+  }
+  .our-work .work-item img {
+    width: 100%;
+    height: auto !important;
+  }
+  .our-work .works {
+    position: relative;
+    top: 0;
+  }
+  .our-work .controls {
+    display: none;
+  }
+  .contact-us {
+    height: 100%;
+    padding: 40px 0;
+  }
+  .contact-us .contact-handler {
+    flex-direction: column;
+  }
+  .contact-us .contact-handler .t {
+    width: 100%;
+  }
+  .contact-us .contact-handler .contact-desc h1 {
+    font-size: 30px;
+  }
+  .contact-us .contact-handler .contact-enter input {
+    width: 100%;
+  }
+}/*# sourceMappingURL=style.css.map */

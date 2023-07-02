@@ -1,0 +1,154 @@
+@media(max-width: 768px) {
+    // vertical lines
+    .left, .right {
+        display: none;
+    }
+
+    // navbar
+    nav {
+        justify-content: space-between;
+        #list-items {
+            position: absolute;
+            left: 500px;
+        }
+        .ul-icon {
+            display: block;
+            color: #fff;
+        }
+    }
+
+    //home page
+    .home {
+        .home-content {
+            h1 {
+                font-size: 35px;
+            }
+        }
+    }
+
+    //our mission
+    .our-mission {
+        justify-content: start;
+        padding: 40px 0;
+        .mission-content {
+            width: 100%;
+            h1 {
+                font-size: 35px;
+            }
+        }
+    }
+
+    // what we do
+    .what-we-do {
+        padding: 40px 0;
+        height: 100%;
+        .what-we-do-handler {
+            flex-direction: column;
+            .what-we-do-content {
+                margin-bottom: 25px;
+                h1 {
+                    font-size: 35px;
+                    margin-bottom: 20px;
+                }
+                p {
+                    width: 100%;
+                }
+            }    
+            .what-features {
+                flex-direction: column;
+                .feat {
+                    p {
+                        font-size: 20px;
+                    }
+                    i {
+                        font-size: 40px;
+                    }
+                }
+            }
+
+            //our solutions
+        }
+    }
+
+    //our solutions
+    .our-solutions {
+        padding: 25px 0;
+        height: 100%;
+        .solutions-content {
+            width: 100%;
+            .main-header {
+                width: 100%;
+                h3 {
+                    font-size: 25px;
+                }
+                p {
+                    font-size: 15px;
+                }
+            }
+            .secondary-solutions {
+                .solution {
+                    width: 100%;
+                    h3 {
+                        font-size: 25px;
+                    }
+                    p {
+                        font-size: 15px;
+                    }
+                }
+            }
+        }
+    }
+
+    //our work
+    .our-work {
+        height: 100%;
+        .work-content {
+            width: 100%;
+            position: relative;
+            top: 0;
+            padding: 30px 0;
+            h1 {
+                font-size: 30px;
+                margin-bottom: 15px;
+            }
+            p {
+                font-size: 16px;
+            }
+        }
+        .work-item {
+            display: block !important;
+            height: auto !important;
+            img {
+                width: 100%;
+                height: auto !important;
+            }
+        }
+        .works {
+            position: relative;
+            top: 0;
+        }
+        .controls {
+            display: none;
+        }
+    }
+
+    //contact us
+    .contact-us {
+        height: 100%;
+        padding: 40px 0;
+        .contact-handler{
+            flex-direction: column;
+            .t {
+                width: 100%;
+            }
+            .contact-desc {
+                h1 {
+                    font-size: 30px;
+                }
+            }
+            .contact-enter input{
+                width: 100%;
+            }
+        }
+    }
+}

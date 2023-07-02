@@ -1,0 +1,24 @@
+@mixin vertical-line {
+    position: fixed;
+    top: 0;
+    width: 1px;
+    height: 90vh;
+    z-index: 1;
+    background: #777;
+}
+
+@mixin background($url, $dir) {
+    background-image: url($url);
+    background-position: top center;
+    height: 100vh;
+    display: flex;
+    flex-direction: $dir;
+    justify-content: center;
+    position: relative;
+    color: #fff;
+}
+
+@mixin inner-img {
+    filter: brightness(0.6);
+    width: 100%;
+}
