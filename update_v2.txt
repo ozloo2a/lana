@@ -1,0 +1,1 @@
+dont forget to adjust active class when scroll according to section id
